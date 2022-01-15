@@ -1,0 +1,40 @@
+.slogan {
+  position: relative;
+}
+
+.text {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.foreground {
+  z-index: 1;
+  color: var(--main-color);
+  position: absolute;
+  animation: slogan;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.background {
+  z-index: 0;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+@keyframes slogan {
+  0% {
+    opacity: 100%;
+  }
+  12% {
+    opacity: 0%;
+  }
+  33% {
+    opacity: 0%;
+  }
+  45% {
+    opacity: 100%;
+  }
+}

@@ -1,9 +1,29 @@
+:root {
+  --main-color: black;
+  --main-bgcolor: white;
+  --card-color: rgb(250,250,250);
+  --shadow-color: rgb(120,120,120);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --main-color: rgb(224,224,224);
+    --main-bgcolor: rgb(12,12,12);
+    --card-color: rgb(48,48,48);
+    --shadow-color: rgb(16,16,16);
+  }
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  color: var(--main-color);
+  background-color: var(--main-bgcolor);
 }
 
 a {

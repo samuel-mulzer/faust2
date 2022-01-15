@@ -1,0 +1,13 @@
+.titleContainer {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  scroll-snap-align: center;
+}
+
+.title {
+  font-size: 6rem;
+}
