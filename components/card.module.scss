@@ -1,0 +1,87 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 2vw;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  z-index: 3;
+  color: var(--main-color);
+  box-shadow: 2px 2px var(--shadow-color);
+}
+
+.image {
+  z-index: 1;
+  transition: transform 0.4s;
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 24%;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--card-color);
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+  box-shadow: 4px 4px var(--shadow-color-active);
+
+  & .image {
+    transform: scale(1.2);
+  }
+
+  & .text {
+    text-decoration: underline;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .card {
+    aspect-ratio: 9 / 5;
+    height: 24vh;
+  }
+  .text {
+    height: 24%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .card {
+    aspect-ratio: 9 / 5;
+    height: 20vh;
+  }
+  .text {
+    height: 24%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .card {
+    width: 40vw;
+    height: calc(2 / 3 * 40vw);
+  }
+  .text {
+    height: 32%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card {
+    width: 40vw;
+    height: calc(2 / 3 * 40vw);
+  }
+  .text {
+    height: 42%;
+  }
+}
+@media screen and (max-height: 500px) {
+  .text {
+    height: 50%;
+  }
+}
