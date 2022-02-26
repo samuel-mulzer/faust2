@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  nextjs:
+    ports:
+      - 80:80
+
+    build: .
+
+    container_name: ui
